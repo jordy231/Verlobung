@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frohe Weihnachten</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<h1 class="heading">Frohe Weihnachten <span id="name"></span> !</h1>
+<a href="#content" id = "los">&#8681;</a>
+<div style="height: 100vh"></div>
+<div id="content">
+    <h2>und herzliche Glückwünsche zur<br>Verlobung!</h2>
+    <img src="img/rings.png" id="ringe"/>
+    <p>"Love does not consist of gazing at each other but in looking together in the same direction.<br>
+        - Antoine de Saint-Exupery<br><br>
+        Ich freue mich sehr für euch und wünsche euch alles Glück dieser Welt für eure gemeinsame Zukunft!<br>
+        Eure Charlotte<br>
+        ______________________________________ </p>
+</div>
+
+<div id="content">
+    <h3>Countdown bis zur Hochzeit:</h3>
+</div>
+
+<div style="text-align: center;">
+    <span id="c1" style="font: bold 30px arial; color: #800000
+   ;"></span><br>
+    <span id="c2" style="font: bold 25px arial; color: #800000
+   ;">;</span><br>
+    <small>...bis zum 08 August 2022 / 12:00 Uhr</small>
+   </div>
+   
+   <script type='text/javascript'>
+   // Erstellt mit dem Countdown-Generator - Werner-Zenk.de
+   // Die Monatsnamen bitte in englisch eintragen (Monatsname, Tag, Jahr, Uhrzeit)
+   var end = new Date('August 08, 2022 12:00:00');
+   
+   function toSt2(n) {
+     var s = '';
+     if (n < 10) {
+      s += '0';
+     }
+     return (s + n).toString();
+   }
+   
+   function toSt3(n) {
+    var s = '';
+    if (n < 10) {
+     s += '00';
+    }
+    else if (n < 100) {
+     s += '0';
+    }
+    return (s + n).toString();
+   }
+   
+   function countdown() {
+    var d = new Date();
+    var count = Math.floor(end.getTime() - d.getTime());
+    if (count > 0) {
+     var miliseconds = toSt3(count%1000); count = Math.floor(count/1000);
+     var seconds = toSt2(count%60); count = Math.floor(count/60);
+     var minutes = toSt2(count%60); count = Math.floor(count/60);
+     var hours = toSt2(count%24); count = Math.floor(count/24);
+     var days = count;
+     document.getElementById('c1').innerHTML = days + ' TAGE';
+     document.getElementById('c2').innerHTML = hours + ':' + minutes + ':' + seconds
+     setTimeout('countdown()', 100);
+    }
+   }
+   countdown();
+   </script>
+<br><br>
+<div id="content">
+    <img src="img/love.jpg" id="liebe"/>
+    <br>
+    <p>"If you live to be a hundred, I want to live to be a hundred minus one day, so I never have to live without you."<br>
+    - Winnie the Pooh<br>
+    ______________________________________</p>
+
+    <img src="img/love2.jpg" id="liebe"/>
+    <br>
+    <p>"You know you're in love when you can't fall asleep because reality is finally better than your dreams."<br>
+    - Dr. Suess<br>
+    ______________________________________</p>
+
+    <img src="img/love3.jpg" id="liebe"/>
+    <br>
+    <p>"Being deeply loved by someone gives you strength, while loving someone deeply gives you courage."<br>
+    - Lao Tzu<br>
+    ______________________________________</p>
+
+    <img src="img/love4.jpg" id="liebe"/>
+    <br>
+    <p>"Love looks not with the eyes, but with the mind,<br>
+        And therefore is winged Cupid painted blind."<br>
+    - William Shakespeare<br>
+    ______________________________________</p>
+
+    <img src="img/love5.jpg" id="liebe"/>
+    <br>
+    <p>"I have died every day waiting for you<br>
+        Darling, don’t be afraid I have loved you<br>
+        For a thousand years<br>
+        I’ll love you for a thousand more."<br>
+    - Christina Perri (A thousand years)<br>
+    ______________________________________</p>
+
+    <img src="img/love6.jpg" id="liebe"/>
+    <br>
+    <p>"My love is not fragile"<br>
+    - Kristoff (Die Eiskönigin II)<br>
+    ______________________________________</p>
+</div>
+
+<script src="name.js"></script>
+<script src="schnee.js"></script>
+</body>
+
+</html>
